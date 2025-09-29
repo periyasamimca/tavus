@@ -1,253 +1,445 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tavus - Pharmaceutical</title>
-  <!-- Bootstrap 5 CSS CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <style>
-    /* ================= Global Styles ================= */
-    html { scroll-behavior: smooth; }
-    body { position: relative; }
-    section { padding-top: 80px;
-        padding-bottom: 20px;
-    }
-    .navbar-brand img { width: auto; }
-
-    /* ================= Back to Top ================= */
-    #backToTop {
-      position: fixed;
-      bottom: 80px;
-      right: 20px;
-      display: none;
-      z-index: 1030;
-      font-size: 2rem;
-      padding: 0.5rem 0.7rem;
-    }
-
-    /* ================= Navbar ================= */
-    .navbar-nav .nav-link.active {
-      font-weight: bold;
-      text-decoration: underline;
-      color: #fff !important;
-    }
-
-    /* ================= Animations ================= */
-    @keyframes zoomInOut {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-      100% { transform: scale(1); }
-    }
-    .zoom-active { animation: zoomInOut 0.8s ease-in-out; display: inline-block; }
-
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(30px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-    .fade-section { opacity: 0; transform: translateY(30px); }
-    .fade-section.visible { animation: fadeInUp 0.8s ease forwards; }
-
-
-    /* ================= Mobile Half-screen Navbar ================= */
-    @media (max-width: 991px) {
-        .navbar-collapse {
-            position: fixed;
-            top: 0;
-            right: 0;
-            height: 100%;
-            width: 50%;
-            background-color: #0d6efd;
-            padding-top: 70px;
-            transform: translateX(100%);
-            transition: transform 0.3s ease-in-out;
-            z-index: 1040;
-        }
-        .navbar-collapse.show { transform: translateX(0); }
-        .navbar-nav .nav-link { color: #fff !important; padding: 1rem 1.5rem; }
-    }
-
-    
-
-    /* ================= Footer ================= */
-    footer {
-      background: #0d6efd;
-      color: #fff;
-      text-align: center;
-      padding: 20px 0;
-      position: relative;
-      width: 100%;
-    }
-    footer a { color: #fff; margin: 0 10px; font-size: 1.5rem; transition: color 0.3s; }
-    footer a:hover { color: #ffc107; }
-  </style>
-</head>
-<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" tabindex="0">
-
-  <!-- ================= Navbar ================= -->
-  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="assets/tavus_logo.jpg" alt="Tavus - Pharmaceutical"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarMenu">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#Home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#AboutUs">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="#OurMission">Our Mission</a></li>
-          <li class="nav-item"><a class="nav-link" href="#OurVision">Our Vision</a></li>
-          <li class="nav-item"><a class="nav-link" href="#OurProducts">Our Products</a></li>
-          <li class="nav-item"><a class="nav-link" href="#Careers">Careers</a></li>
-          <li class="nav-item"><a class="nav-link" href="#ContactUs">Contact Us</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- ================= Home Section ================= -->
-  <section id="Home" class="bg-light">
-    <div class="container">
-      <h1 class="section-title">Welcome to TAVUS</h1>
-      <p class="fade-section">At TAVUS, we believe that every medicine has the power to transform lives—our role is to ensure it reaches the people who need it most. With innovative pharmaceutical marketing solutions, ethical practices, and a commitment to excellence, we connect healthcare providers, pharmacists, and patients with trusted brands and life-changing treatments.</p>
-      <p class="fade-section">Together, let’s build a healthier tomorrow.</p>
-    </div>
-  </section>
-
-  <!-- ================= About Us Section ================= -->
-  <section id="AboutUs" class="bg-light">
-    <div class="container">
-      <h1 class="section-title">About Us</h1>
-      <p class="fade-section">At TAVUS, we are driven by the mission to make quality healthcare accessible through innovative pharmaceutical marketing solutions. As a trusted partner in the healthcare industry, we bridge the gap between life-changing medicines and the people who need them most.</p>
-      <p class="fade-section">We believe in integrity, innovation, and impact—values that guide every step of our journey. By staying ahead with market insights and leveraging modern marketing approaches, we ensure that healthcare providers, pharmacists, and patients are connected with effective and reliable treatments.</p>
-      <p class="fade-section">At TAVUS, we don’t just market medicines—we build trust, create value, and contribute to a healthier tomorrow.</p>
-      <p class="fade-section">Connecting Medicines with Lives” or “Innovating Healthcare Access”</p>
-    </div>
-  </section>
-
-  <!-- ================= Our Mission Section ================= -->
-  <section id="OurMission" class="bg-light">
-    <div class="container">
-      <h1 class="section-title">Our Mission</h1>
-      <p class="fade-section">At TAVUS, our mission is to empower healthier lives by delivering innovative pharmaceutical marketing solutions that ensure the availability, accessibility, and awareness of quality medicines. We are committed to building strong partnerships, fostering trust, and creating value for healthcare providers, patients, and stakeholders alike.</p>
-    </div>
-  </section>
-
-  <!-- ================= Our Vision Section ================= -->
-  <section id="OurVision" class="bg-light">
-    <div class="container">
-      <h1 class="section-title">Our Vision</h1>
-      <p class="fade-section">Our vision is to be a trusted leader in pharmaceutical marketing, recognized for excellence, innovation, and ethical practices. We aspire to bridge the gap between medicine and society by making reliable healthcare solutions reach every corner, improving quality of life and shaping a healthier future for all.</p>
-    </div>
-  </section>
-
-  <!-- ================= Our Products Section ================= -->
-  <section id="OurProducts" class="bg-light">
-    <div class="container">
-      <h1 class="section-title">Our Products</h1>
-      <p class="fade-section">At TAVUS, we are committed to delivering high-quality, effective, and reliable pharmaceutical solutions that improve health and enhance quality of life. Our product portfolio is designed to meet diverse medical needs, focusing on safety, innovation, and accessibility.</p>
-      <p class="fade-section"><strong>Therapeutic Segments</strong></p>
-      <div class="row">
-        <!-- Product Cards -->
-        <div class="col-md-4 fade-section"><div class="card"><div class="card-body"><h5 class="card-title">Pain Management & Anti-Inflammatory</h5><p class="card-text">Trusted solutions for effective relief.</p></div></div></div>
-        <div class="col-md-4 fade-section"><div class="card"><div class="card-body"><h5 class="card-title">Anti-Infectives</h5><p class="card-text">Medicines that help fight infections and support faster recovery.</p></div></div></div>
-        <div class="col-md-4 fade-section"><div class="card"><div class="card-body"><h5 class="card-title">Cardiac & Diabetic Care</h5><p class="card-text">Products that support long-term wellness and lifestyle management.</p></div></div></div>
-        <div class="col-md-4 fade-section"><div class="card"><div class="card-body"><h5 class="card-title">Nutritional & Wellness Range</h5><p class="card-text">Supplements to boost health and immunity.</p></div></div></div>
-      </div>
-      <p class="fade-section">At <strong>TAVUS</strong>, every product reflects our promise of <strong>quality, trust, and care.</strong></p>
-    </div>
-  </section>
-
-  <!-- ================= Careers Section ================= -->
-  <section id="Careers" class="bg-light">
-    <div class="container">
-      <h1 class="section-title">Careers</h1>
-      <p class="fade-section">At TAVUS, we believe that our people are the true strength behind our success. As a growing pharmaceutical marketing company, we are always looking for passionate, innovative, and dedicated individuals who share our vision of making quality healthcare accessible to all.</p>
-      <h4 class="mt-4 fade-section">Why Join Us?</h4>
-      <ul class="fade-section">
-        <li>Opportunity to be part of a purpose-driven company in the healthcare sector.</li>
-        <li>A dynamic, supportive, and growth-oriented work environment.</li>
-        <li>Continuous learning and professional development opportunities.</li>
-        <li>A culture that values integrity, teamwork, and innovation.</li>
-      </ul>
-      <h4 class="mt-4 fade-section">Who We Look For</h4>
-      <p class="fade-section">We welcome professionals who are driven, adaptable, and committed to excellence—whether in sales, marketing, medical affairs, or corporate functions. At TAVUS, every role contributes to shaping a healthier future.</p>
-      <h4 class="mt-4 fade-section">Current Openings</h4>
-      <p class="fade-section">Stay connected for upcoming opportunities. You can also share your resume with us at <a href="mailto:info@tavuspharma.com">info@tavuspharma.com</a> and we'll reach out when a suitable position is available.</p>
-      <p class="fade-section">At TAVUS, it's more than a job—it's a chance to make a difference.</p>
-    </div>
-  </section>
-
-  <!-- ================= Contact Us Section ================= -->
-  <section id="ContactUs" class="bg-light">
-    <div class="container">
-      <h1 class="section-title">Contact Us</h1>
-      <p class="fade-section">We're here to connect, collaborate, and support. Whether you’re a healthcare provider, partner, or future team member, the TAVUS team is ready to assist you.</p>
-      <div class="fade-section mt-4">
-        <p><i class="bi bi-geo-alt-fill"></i> P.NO:22/G3, Deepachi Amman Kovil Street, <br>Chithirai Nagar, Pozhichalur,<br>Chennai-600 074.</p>
-        <p><i class="bi bi-envelope-fill"></i> <a href="mailto:info@tavuspharma.com">info@tavuspharma.com</a></p>
-        <p><i class="bi bi-globe2"></i> <a href="https://www.tavuspharma.com" target="_blank">www.tavuspharma.com</a></p>
-        <p><i class="bi bi-telephone-fill"></i> +044-4614 9022</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= Footer ================= -->
-  <footer>
-    <a href="https://facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
-    <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
-    <a href="https://youtube.com" target="_blank"><i class="bi bi-youtube"></i></a>
-    <p class="mt-2 mb-0">&copy; 2025 Tavus pharmaceutical</p>
-  </footer>
-
-  <!-- ================= Back to Top ================= -->
-  <button id="backToTop" class="btn btn-primary rounded-circle fade"><i class="bi bi-arrow-up-circle"></i></button>
-
-  <!-- ================= Bootstrap & Custom JS ================= -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    const backToTop = document.getElementById("backToTop");
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 200) {
-        backToTop.style.display = "block";
-        backToTop.classList.add("show");
-      } else {
-        backToTop.classList.remove("show");
-        setTimeout(() => { if (!backToTop.classList.contains("show")) backToTop.style.display = "none"; }, 150);
-      }
-    });
-    backToTop.addEventListener("click", () => { window.scrollTo({ top: 0, behavior: "smooth" }); });
-
-    // Section title zoom animation
-    document.querySelectorAll(".section-title").forEach(title => {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.remove("zoom-active");
-            void entry.target.offsetWidth;
-            entry.target.classList.add("zoom-active");
-          }
-        });
-      }, { threshold: 0.6 });
-      observer.observe(title);
-    });
-
-    // Fade-in sections
-    document.querySelectorAll(".fade-section").forEach(el => {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add("visible"); });
-      }, { threshold: 0.2 });
-      observer.observe(el);
-    });
-
-    // Close mobile menu on link click
-    document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            const bsCollapse = new bootstrap.Collapse(document.getElementById('navbarMenu'), { toggle: true });
-        });
-    });
-  </script>
-</body>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+      <title>Tavus - Pharmaceutical</title>
+      <!-- Bootstrap 5 CSS CDN -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Bootstrap Icons CDN -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+      <style>
+         /* ================= Global Styles ================= */
+         html { scroll-behavior: smooth; }
+         body { position: relative; }
+         section { padding-top: 80px;
+         padding-bottom: 20px;
+         }
+         .navbar-brand img { width: auto; }
+         body {
+         scroll-behavior: smooth;
+         }
+         section {
+         padding: 80px 0;
+         }
+         .section-title {
+         font-size: 2rem;
+         font-weight: 700;
+         margin-bottom: 30px;
+         text-align: center;
+         }
+         /* Optional custom soft colors */
+         .bg-theme-blue { background-color: #e8f1ff; }
+         .bg-theme-green { background-color: #eaf8f0; }
+         .bg-theme-yellow { background-color: #fff9e6; }
+         .bg-color-light { background-color: #FBF9D1; }
+         /* ================= Back to Top ================= */
+         #backToTop {
+         position: fixed;
+         bottom: 80px;
+         right: 20px;
+         display: none;
+         z-index: 1030;
+         font-size: 2rem;
+         padding: 0.5rem 0.7rem;
+         }
+         /* ================= Navbar ================= */
+         .navbar-nav .nav-link.active {
+         font-weight: bold;
+         text-decoration: underline;
+         color: #fff !important;
+         }
+         /* ================= Animations ================= */
+         @keyframes zoomInOut {
+         0% { transform: scale(1); }
+         50% { transform: scale(1.2); }
+         100% { transform: scale(1); }
+         }
+         .zoom-active { animation: zoomInOut 0.8s ease-in-out; display: inline-block; }
+         @keyframes fadeInUp {
+         0% { opacity: 0; transform: translateY(30px); }
+         100% { opacity: 1; transform: translateY(0); }
+         }
+         .fade-section { opacity: 0; transform: translateY(30px); }
+         .fade-section.visible { animation: fadeInUp 0.8s ease forwards; }
+         /* ================= Mobile Half-screen Navbar ================= */
+         @media (max-width: 991px) {
+         .navbar-collapse {
+         position: fixed;
+         top: 0;
+         right: 0;
+         height: 100%;
+         width: 50%;
+         background-color: #0d6efd;
+         padding-top: 70px;
+         transform: translateX(100%);
+         transition: transform 0.3s ease-in-out;
+         z-index: 1040;
+         }
+         .navbar-collapse.show { transform: translateX(0); }
+         .navbar-nav .nav-link { color: #fff !important; padding: 1rem 1.5rem; }
+         }
+         /* Skeleton placeholder */
+         .skeleton {
+         width: 100%;
+         height: 100%;
+         background: linear-gradient(90deg, #eee 25%, #ddd 50%, #eee 75%);
+         background-size: 200% 100%;
+         animation: skeleton-loading 1.5s infinite;
+         border-radius: 8px;
+         }
+         @keyframes skeleton-loading {
+         0% { background-position: 200% 0; }
+         100% { background-position: -200% 0; }
+         }
+         .skeleton-wrapper {
+         position: relative;
+         overflow: hidden;
+         }
+         .skeleton-wrapper img {
+         opacity: 0;
+         transition: opacity 0.5s ease-in-out;
+         display: block;
+         width: 100%;
+         height: auto;
+         }
+         .skeleton-wrapper img.loaded {
+         opacity: 1;
+         }
+         /* ================= Footer ================= */
+         footer {
+         background: #0d6efd;
+         color: #fff;
+         text-align: center;
+         padding: 20px 0;
+         position: relative;
+         width: 100%;
+         }
+         footer a { color: #fff; margin: 0 10px; font-size: 1.5rem; transition: color 0.3s; }
+         footer a:hover { color: #ffc107; }
+      </style>
+   </head>
+   <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" tabindex="0">
+      <!-- ================= Navbar ================= -->
+      <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+         <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="assets/tavus_logo.jpg" alt="Tavus - Pharmaceutical"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item"><a class="nav-link" href="#Home">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#AboutUs">About Us</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#OurMission">Our Mission</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#OurVision">Our Vision</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#OurProducts">Our Products</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#Careers">Careers</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#ContactUs">Contact Us</a></li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <!-- ================= Home Section ================= -->
+      <section id="Home" class="bg-color-light">
+         <div class="container">
+            <div class="row align-items-center">
+               <!-- Image Left -->
+               <div class="col-lg-6 text-center mb-3 mb-lg-0">
+                  <img src="assets/home.png" alt="Welcome to TAVUS" class="img-fluid rounded shadow"  loading="lazy"
+                     onload="this.classList.add('loaded'); this.previousElementSibling.remove();">
+               </div>
+               <!-- Content Right -->
+               <div class="col-lg-6">
+                  <h1 class="section-title">Welcome to TAVUS</h1>
+                  <p class="fade-section">At TAVUS, we believe that every medicine has the power to transform lives—our role is to ensure it reaches the people who need it most. With innovative pharmaceutical marketing solutions, ethical practices, and a commitment to excellence, we connect healthcare providers, pharmacists, and patients with trusted brands and life-changing treatments.</p>
+                  <p class="fade-section">Together, let’s build a healthier tomorrow.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- ================= About Us Section ================= -->
+      <section id="AboutUs" class="bg-theme-blue">
+         <div class="container">
+            <div class="row align-items-center flex-lg-row-reverse">
+               <!-- Image Right -->
+               <div class="col-lg-6 text-center mb-3 mb-lg-0">
+                  <img src="assets/aboutUS.png" alt="About TAVUS" class="img-fluid rounded shadow"  loading="lazy"
+                     onload="this.classList.add('loaded'); this.previousElementSibling.remove();">
+               </div>
+               <!-- Content Left -->
+               <div class="col-lg-6">
+                  <h1 class="section-title">About Us</h1>
+                  <p class="fade-section">At TAVUS, we are driven by the mission to make quality healthcare accessible through innovative pharmaceutical marketing solutions. As a trusted partner in the healthcare industry, we bridge the gap between life-changing medicines and the people who need them most.</p>
+                  <p class="fade-section">Founded with a vision to empower healthier communities, TAVUS specializes in marketing, branding, and distribution strategies that help pharmaceutical products reach their full potential in the market. Our team brings together expertise in medical knowledge, market dynamics, and customer engagement to deliver impactful results for our partners.</p>
+                  <p class="fade-section">We believe in integrity, innovation, and impact—values that guide every step of our journey. By staying ahead with market insights and leveraging modern marketing approaches, we ensure that healthcare providers, pharmacists, and patients are connected with effective and reliable treatments.</p>
+                  <p class="fade-section">At TAVUS, we don’t just market medicines—we build trust, create value, and contribute to a healthier tomorrow.</p>
+                  <p class="fade-section">Connecting Medicines with Lives” or “Innovating Healthcare Access”</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- ================= Our Mission Section ================= -->
+      <section id="OurMission" class="bg-color-light">
+         <div class="container">
+            <div class="row align-items-center">
+               <!-- Image Left -->
+               <div class="col-lg-6 text-center mb-3 mb-lg-0">
+                  <img src="https://placehold.co/1200x800?text=Our+Mission" alt="Our Mission" class="img-fluid rounded shadow"  loading="lazy"
+                     onload="this.classList.add('loaded'); this.previousElementSibling.remove();">
+               </div>
+               <!-- Content Right -->
+               <div class="col-lg-6">
+                  <h1 class="section-title">Our Mission</h1>
+                  <p class="fade-section">At TAVUS, our mission is to empower healthier lives by delivering innovative pharmaceutical marketing solutions that ensure the availability, accessibility, and awareness of quality medicines. We are committed to building strong partnerships, fostering trust, and creating value for healthcare providers, patients, and stakeholders alike.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- ================= Our Vision Section ================= -->
+      <section id="OurVision" class="bg-theme-blue">
+         <div class="container">
+            <div class="row align-items-center flex-lg-row-reverse">
+               <!-- Image Right -->
+               <div class="col-lg-6 text-center mb-3 mb-lg-0">
+                  <img src="https://placehold.co/1200x800?text=Our+Vision" alt="Our Vision" class="img-fluid rounded shadow"  loading="lazy"
+                     onload="this.classList.add('loaded'); this.previousElementSibling.remove();">
+               </div>
+               <!-- Content Left -->
+               <div class="col-lg-6">
+                  <h1 class="section-title">Our Vision</h1>
+                  <p class="fade-section">Our vision is to be a trusted leader in pharmaceutical marketing, recognized for excellence, innovation, and ethical practices. We aspire to bridge the gap between medicine and society by making reliable healthcare solutions reach every corner, improving quality of life and shaping a healthier future for all.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- ================= Our Products Section ================= -->
+      <section id="OurProducts" class="bg-color-light">
+         <div class="container">
+            <div class="row align-items-center">
+               <!-- Image Left -->
+               <div class="col-lg-6 text-center mb-3 mb-lg-0">
+                  <img src="https://placehold.co/1200x800?text=Our+Products" alt="Our Products" class="img-fluid rounded shadow"  loading="lazy"
+                     onload="this.classList.add('loaded'); this.previousElementSibling.remove();">
+               </div>
+               <!-- Content Right -->
+               <div class="col-lg-6">
+                  <h1 class="section-title">Our Products</h1>
+                  <p class="fade-section">At TAVUS, we are committed to delivering high-quality, effective, and reliable pharmaceutical solutions that improve health and enhance quality of life. Our product portfolio is designed to meet diverse medical needs, focusing on safety, innovation, and accessibility.</p>
+                  <p class="fade-section"><strong>Therapeutic Segments</strong></p>
+                  <div class="row">
+                     <!-- Product Cards -->
+                     <div class="col-md-4 fade-section">
+                        <div class="card">
+                           <div class="card-body">
+                              <h5 class="card-title">Pain Management & Anti-Inflammatory</h5>
+                              <p class="card-text">Trusted solutions for effective relief.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4 fade-section">
+                        <div class="card">
+                           <div class="card-body">
+                              <h5 class="card-title">Anti-Infectives</h5>
+                              <p class="card-text">Medicines that help fight infections and support faster recovery.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4 fade-section">
+                        <div class="card">
+                           <div class="card-body">
+                              <h5 class="card-title">Cardiac & Diabetic Care</h5>
+                              <p class="card-text">Products that support long-term wellness and lifestyle management.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4 fade-section">
+                        <div class="card">
+                           <div class="card-body">
+                              <h5 class="card-title">Nutritional & Wellness Range</h5>
+                              <p class="card-text">Supplements to boost health and immunity.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <p class="fade-section">At <strong>TAVUS</strong>, every product reflects our promise of <strong>quality, trust, and care.</strong></p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- ================= Careers Section ================= -->
+      <section id="Careers" class="bg-theme-blue">
+         <div class="container">
+            <div class="row align-items-center flex-lg-row-reverse">
+               <!-- Image Right -->
+               <div class="col-lg-6 text-center mb-3 mb-lg-0">
+                  <img src="https://placehold.co/1200x800?text=Careers" alt="Careers at TAVUS" class="img-fluid rounded shadow"  loading="lazy"
+                     onload="this.classList.add('loaded'); this.previousElementSibling.remove();">
+               </div>
+               <!-- Content Left -->
+               <div class="col-lg-6">
+                  <h1 class="section-title">Careers</h1>
+                  <p class="fade-section">At TAVUS, we believe that our people are the true strength behind our success. As a growing pharmaceutical marketing company, we are always looking for passionate, innovative, and dedicated individuals who share our vision of making quality healthcare accessible to all.</p>
+                  <h4 class="mt-4 fade-section">Why Join Us?</h4>
+                  <ul class="fade-section">
+                     <li>Opportunity to be part of a purpose-driven company in the healthcare sector.</li>
+                     <li>A dynamic, supportive, and growth-oriented work environment.</li>
+                     <li>Continuous learning and professional development opportunities.</li>
+                     <li>A culture that values integrity, teamwork, and innovation.</li>
+                  </ul>
+                  <h4 class="mt-4 fade-section">Who We Look For</h4>
+                  <p class="fade-section">We welcome professionals who are driven, adaptable, and committed to excellence—whether in sales, marketing, medical affairs, or corporate functions. At TAVUS, every role contributes to shaping a healthier future.</p>
+                  <h4 class="mt-4 fade-section">Current Openings</h4>
+                  <p class="fade-section">Stay connected for upcoming opportunities. You can also share your resume with us at <a href="mailto:info@tavuspharma.com">info@tavuspharma.com</a> and we'll reach out when a suitable position is available.</p>
+                  <p class="fade-section">At TAVUS, it's more than a job—it's a chance to make a difference.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- ================= Contact Us Section ================= -->
+      <section id="ContactUs" class="bg-color-light">
+         <div class="container">
+            <div class="row align-items-center">
+               <!-- Image Left -->
+               <div class="col-lg-6 text-center mb-3 mb-lg-0">
+                  <img src="https://placehold.co/1200x800?text=Contact+Us" alt="Contact TAVUS" class="img-fluid rounded shadow"  loading="lazy"
+                     onload="this.classList.add('loaded'); this.previousElementSibling.remove();">
+               </div>
+               <!-- Content Right -->
+               <div class="col-lg-6">
+                  <h1 class="section-title">Contact Us</h1>
+                  <p class="fade-section">We're here to connect, collaborate, and support. Whether you’re a healthcare provider, partner, or future team member, the TAVUS team is ready to assist you.</p>
+                  <div class="fade-section mt-4">
+                     <p><i class="bi bi-geo-alt-fill"></i> P.NO:22/G3, Deepachi Amman Kovil Street, <br>Chithirai Nagar, Pozhichalur,<br>Chennai-600 074.</p>
+                     <p><i class="bi bi-envelope-fill"></i> <a href="mailto:info@tavuspharma.com">info@tavuspharma.com</a></p>
+                     <p><i class="bi bi-globe2"></i> <a href="https://www.tavuspharma.com" target="_blank">www.tavuspharma.com</a></p>
+                     <p><i class="bi bi-telephone-fill"></i> +044-4614 9022</p>
+                  </div>
+                  <!-- Contact details -->
+               </div>
+               <form id="contactForm" novalidate>
+                  <!-- Name -->
+                  <h2>Submit your queries:</h2>
+                  <div class="mb-3">
+                     <label for="name" class="form-label">Name *</label>
+                     <input type="text" class="form-control" id="name" name="name" required>
+                     <div class="invalid-feedback">Please enter your name.</div>
+                  </div>
+                  <!-- Email -->
+                  <div class="mb-3">
+                     <label for="email" class="form-label">Email *</label>
+                     <input type="email" class="form-control" id="email" name="email" required>
+                     <div class="invalid-feedback">Please enter a valid email address.</div>
+                  </div>
+                  <!-- Contact Number -->
+                  <div class="mb-3">
+                     <label for="phone" class="form-label">Contact Number</label>
+                     <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9+\- ]+">
+                     <div class="invalid-feedback">Please enter a valid phone number (digits, +, - allowed).</div>
+                  </div>
+                  <!-- Message -->
+                  <div class="mb-3">
+                     <label for="message" class="form-label">Message *</label>
+                     <textarea class="form-control" id="message" name="message" rows="4" maxlength="500" required></textarea>
+                     <small id="charCount" class="text-muted">0/500</small>
+                     <div class="invalid-feedback">Please enter your message (max 500 characters).</div>
+                  </div>
+                  <!-- Submit -->
+                  <button type="submit" class="btn btn-primary">Send Message</button>
+               </form>
+               <div id="formStatus" class="mt-3"></div>
+               <!-- EmailJS SDK -->
+               <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+               <script>
+                  // Initialize EmailJS
+                  emailjs.init("1Vu0dXhVcMg9KZrrt");  // Replace with your EmailJS Public Key
+                  
+                  const form = document.getElementById("contactForm");
+                  const status = document.getElementById("formStatus");
+                  const messageInput = document.getElementById("message");
+                  const charCount = document.getElementById("charCount");
+                  
+                  // Character counter
+                  messageInput.addEventListener("input", () => {
+                    charCount.textContent = `${messageInput.value.length}/500`;
+                  });
+                  
+                  // Bootstrap validation + EmailJS send
+                  form.addEventListener("submit", function(e) {
+                    e.preventDefault();
+                    if (!form.checkValidity()) {
+                      e.stopPropagation();
+                      form.classList.add("was-validated");
+                      return;
+                    }
+                  
+                    emailjs.sendForm("service_2vhe3po", "template_jmhc7br", this)
+                      .then(() => {
+                        status.innerHTML = "<div class='alert alert-success'>✅ Message sent successfully!</div>";
+                        form.reset();
+                        charCount.textContent = "0/500";
+                        form.classList.remove("was-validated");
+                      }, (err) => {
+                        status.innerHTML = "<div class='alert alert-danger'>❌ Failed to send: " + JSON.stringify(err) + "</div>";
+                      });
+                  });
+               </script>
+            </div>
+         </div>
+      </section>
+      <!-- ================= Footer ================= -->
+      <footer>
+         <a href="https://facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+         <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+         <a href="https://youtube.com" target="_blank"><i class="bi bi-youtube"></i></a>
+         <p class="mt-2 mb-0">&copy; 2025 Tavus pharmaceutical</p>
+      </footer>
+      <!-- ================= Back to Top ================= -->
+      <button id="backToTop" class="btn btn-primary rounded-circle fade"><i class="bi bi-arrow-up-circle"></i></button>
+      <!-- ================= Bootstrap & Custom JS ================= -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script>
+         const backToTop = document.getElementById("backToTop");
+         window.addEventListener("scroll", () => {
+           if (window.scrollY > 200) {
+             backToTop.style.display = "block";
+             backToTop.classList.add("show");
+           } else {
+             backToTop.classList.remove("show");
+             setTimeout(() => { if (!backToTop.classList.contains("show")) backToTop.style.display = "none"; }, 150);
+           }
+         });
+         backToTop.addEventListener("click", () => { window.scrollTo({ top: 0, behavior: "smooth" }); });
+         
+         // Section title zoom animation
+         document.querySelectorAll(".section-title").forEach(title => {
+           const observer = new IntersectionObserver(entries => {
+             entries.forEach(entry => {
+               if (entry.isIntersecting) {
+                 entry.target.classList.remove("zoom-active");
+                 void entry.target.offsetWidth;
+                 entry.target.classList.add("zoom-active");
+               }
+             });
+           }, { threshold: 0.6 });
+           observer.observe(title);
+         });
+         
+         // Fade-in sections
+         document.querySelectorAll(".fade-section").forEach(el => {
+           const observer = new IntersectionObserver(entries => {
+             entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add("visible"); });
+           }, { threshold: 0.2 });
+           observer.observe(el);
+         });
+         
+         // Close mobile menu on link click
+         document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+             link.addEventListener('click', () => {
+                 const bsCollapse = new bootstrap.Collapse(document.getElementById('navbarMenu'), { toggle: true });
+             });
+         });
+      </script>
+   </body>
 </html>
